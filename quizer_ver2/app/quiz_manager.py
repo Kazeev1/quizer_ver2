@@ -3,7 +3,7 @@ import random
 import time
 from datetime import datetime
 from typing import List, Dict, Tuple, Optional
-from app.utils import logger
+from utils import logger
 
 def import_questions(parsed_questions: List[Dict], source_filename: str) -> Tuple[Dict[str, Dict], List[str], List[Dict]]:
     """
@@ -107,4 +107,5 @@ def grade_answer(question_obj: Dict, chosen_text: str) -> bool:
 
 def get_shuffled_options(question_obj: Dict, order: List[int]) -> List[str]:
     orig = question_obj["options"]
+
     return [orig[i] for i in order]
