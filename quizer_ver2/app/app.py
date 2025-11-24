@@ -1,7 +1,10 @@
 import streamlit as st
 import time
 from datetime import datetime
-from app import parser, quiz_manager, ui, utils
+import parser
+import quiz_manager
+import ui
+import utils
 
 # Настройка страницы
 st.set_page_config(page_title="Streamlit Quiz", page_icon="📝")
@@ -197,4 +200,5 @@ def main():
             st.rerun()
 
 if __name__ == "__main__":
+
     main()
