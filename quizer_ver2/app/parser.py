@@ -3,7 +3,7 @@ import docx
 import io
 import random
 from typing import List, Dict
-from app.utils import logger
+from utils import logger
 
 def _parse_quiz_bytes(docx_bytes: bytes) -> List[Dict]:
     """
@@ -67,4 +67,5 @@ def parse_quiz_bytes_cached(docx_bytes: bytes) -> List[Dict]:
     Обертка с кешированием для Streamlit.
     Вызывает логику парсинга.
     """
+
     return _parse_quiz_bytes(docx_bytes)
